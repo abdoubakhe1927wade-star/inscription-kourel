@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscription - Kourel 1 Mafatihul Bichri</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Kourel 1 Mafatihul Bichri</h1>
+            <p>Formulaire d'inscription des membres</p>
+        </header>
+
+        <section class="form-section">
+            <form id="registrationForm">
+                <div class="form-group">
+                    <label for="nom">Nom</label>
+                    <input type="text" id="nom" required placeholder="Ex: Diop">
+                </div>
+                <div class="form-group">
+                    <label for="prenom">Prénom</label>
+                    <input type="text" id="prenom" required placeholder="Ex: Moussa">
+                </div>
+                <div class="form-group">
+                    <label for="telephone">Numéro Téléphone</label>
+                    <input type="tel" id="telephone" required placeholder="Ex: 771234567">
+                </div>
+                <div class="form-group">
+                    <label for="commission">Commission</label>
+                    <select id="commission" required>
+                        <option value="">Sélectionnez une commission</option>
+                        <option value="Organisation">Organisation</option>
+                        <option value="Finances">Finances</option>
+                        <option value="Communication">Communication</option>
+                        <option value="Sociale">Sociale</option>
+                        <option value="Culturelle">Culturelle</option>
+                        <option value="Sonorisation">Sonorisation</option>
+                        <option value="Collation">Collation</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn-submit">Envoyer</button>
+            </form>
+        </section>
+
+        <!-- La liste est désormais masquée pour les membres -->
+        <section class="list-section" style="display: none;">
+            <h2>Liste des Membres (<span id="memberCount">0</span>)</h2>
+            <div class="actions">
+                <button id="downloadBtn" class="btn-secondary">Télécharger la liste (Excel)</button>
+                <button id="clearBtn" class="btn-danger">Effacer tout</button>
+            </div>
+            <div class="table-container">
+                <table id="membersTable">
+                    <thead>
+                        <tr>
+                            <th>Nom</th>
+                            <th>Prénom</th>
+                            <th>Téléphone</th>
+                            <th>Commission</th>
+                        </tr>
+                    </thead>
+                    <tbody id="membersList">
+                        <!-- Les membres seront ajoutés ici -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
